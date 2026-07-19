@@ -361,7 +361,7 @@ function card(a, big) {
 
     <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2">
       <a href="${esc(repoUrl)}" target="_blank" rel="noopener" class="text-xs px-2.5 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-slate-700">${a.path ? 'View folder' : 'View repo'}</a>
-      <button data-readme="${esc(a.repo)}" data-path="${esc(a.path || '')}" data-url="${esc(repoUrl)}" data-title="${esc(a.name)}" class="text-xs px-2.5 py-1.5 rounded-lg border border-slate-300 text-slate-600 hover:border-brand-400">Details</button>
+      <button data-readme="${esc(a.repo)}" data-path="${esc(a.path || '')}" data-branch="${esc(branch)}" data-url="${esc(repoUrl)}" data-title="${esc(a.name)}" class="text-xs px-2.5 py-1.5 rounded-lg border border-slate-300 text-slate-600 hover:border-brand-400">Details</button>
       ${docs}
       <span class="ml-auto text-[10px] text-slate-400">community-supported</span>
     </div>
@@ -369,27 +369,53 @@ function card(a, big) {
 }
 
 function wireCards() {
-  document.querySelectorAll('[data-readme]').forEach(b => b.onclick = () => openReadme(b.dataset.readme, b.dataset.title, b.dataset.path, b.dataset.url));
+  document.querySelectorAll('[data-readme]').forEach(b => b.onclick = () => openReadme(b.dataset.readme, b.dataset.title, b.dataset.path, b.dataset.url, b.dataset.branch));
 }
 
 /* ---- README modal ---- */
-async function openReadme(repo, title, path, url) {
+async function openReadme(repo, title, path, url, branch) {
   $('#modal-title').textContent = title;
   $('#modal-repo').textContent = path ? (repo + '/' + path) : repo;
   $('#modal-open').href = url || ('https://github.com/' + repo);
   $('#modal-body').innerHTML = '<p class="text-slate-400">Loading README...</p>';
   $('#modal').classList.remove('hidden');
   document.body.style.overflow = 'hidden';
+  branch = branch || 'main';
+  const dir = path || '';
   try {
     const endpoint = path ? ('/repos/' + repo + '/readme/' + path) : ('/repos/' + repo + '/readme');
     const r = await fetch('https://api.github.com' + endpoint, { headers: { 'Accept':'application/vnd.github.html+json' } });
     if (!r.ok) throw new Error('no readme');
     const html = await r.text();
     $('#modal-body').innerHTML = html;
-    $('#modal-body').querySelectorAll('a').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+    fixReadmeLinks($('#modal-body'), repo, branch, dir);
   } catch (e) {
     $('#modal-body').innerHTML = '<p class="text-slate-400">No README available, or the GitHub rate limit was reached. Open the repo on GitHub instead.</p>';
   }
+}
+
+function resolveRepoPath(dir, rel) {
+  const parts = (dir ? dir.split('/') : []).concat(rel.split('/'));
+  const out = [];
+  for (const p of parts) { if (p === '' || p === '.') continue; if (p === '..') out.pop(); else out.push(p); }
+  return out.join('/');
+}
+function splitSuffix(v) { const i = v.search(/[#?]/); return i === -1 ? [v, ''] : [v.slice(0, i), v.slice(i)]; }
+
+function fixReadmeLinks(root, repo, branch, dir) {
+  root.querySelectorAll('a[href]').forEach(a => {
+    a.target = '_blank'; a.rel = 'noopener';
+    const href = a.getAttribute('href');
+    if (!href || /^(https?:|mailto:|#|data:)/i.test(href)) return;
+    const [p, suf] = splitSuffix(href);
+    a.setAttribute('href', 'https://github.com/' + repo + '/blob/' + branch + '/' + resolveRepoPath(dir, p) + suf);
+  });
+  root.querySelectorAll('img[src]').forEach(img => {
+    const src = img.getAttribute('src');
+    if (!src || /^(https?:|data:)/i.test(src)) return;
+    const [p] = splitSuffix(src);
+    img.setAttribute('src', 'https://raw.githubusercontent.com/' + repo + '/' + branch + '/' + resolveRepoPath(dir, p));
+  });
 }
 function closeModal() { $('#modal').classList.add('hidden'); document.body.style.overflow = ''; }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
