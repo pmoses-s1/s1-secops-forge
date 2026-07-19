@@ -49,7 +49,6 @@ async function enrichOne(app) {
       out.html_url = repo.html_url;
       out.default_branch = repo.default_branch;
       out.archived = !!repo.archived;
-      if (repo.homepage && !out.docs_url) out.docs_url = repo.homepage;
       if (!out.author) out.author = repo.owner ? repo.owner.login : app.repo.split('/')[0];
     }
     const rel = await gh('/repos/' + app.repo + '/releases/latest');

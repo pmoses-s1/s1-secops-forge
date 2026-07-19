@@ -23,8 +23,8 @@
   "apps": [
     {
       "id": "ai-siem",
-      "name": "AI SIEM (OCSF Pipelines)",
-      "tagline": "OCSF pipelines and community transforms for SentinelOne AI SIEM",
+      "name": "AI SIEM",
+      "tagline": "",
       "repo": "Sentinel-One/ai-siem",
       "category": "Data & AI-SIEM",
       "type": "integration",

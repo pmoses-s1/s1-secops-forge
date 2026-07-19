@@ -238,7 +238,6 @@ function applyRepo(app, j) {
   app.html_url = j.html_url || app.html_url;
   app.default_branch = j.default_branch || app.default_branch;
   app.archived = !!j.archived;
-  if (j.homepage && !app.docs_url) app.docs_url = j.homepage;
 }
 
 function readCache(repo) {
