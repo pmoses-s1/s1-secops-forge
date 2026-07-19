@@ -1,0 +1,51 @@
+name: Enrich catalogue
+
+# Rebuilds catalogue.json from apps.json plus live GitHub metadata.
+# Runs on a schedule, when the manifest changes, and on manual trigger.
+# Commits catalogue.json back to the branch, which triggers a Pages rebuild
+# when Pages is set to deploy from this branch.
+
+on:
+  schedule:
+    - cron: '17 * * * *'   # hourly
+  push:
+    branches: [ main ]
+    paths:
+      - 'apps.json'
+      - 'scripts/enrich.mjs'
+      - '.github/workflows/enrich.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: enrich
+  cancel-in-progress: true
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate catalogue.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/enrich.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- catalogue.json; then
+            echo "No changes to catalogue.json"
+          else
+            git config user.name "s1-secops-forge-bot"
+            git config user.email "actions@github.com"
+            git add catalogue.json
+            git commit -m "chore: refresh catalogue [skip ci]"
+            git push
+          fi

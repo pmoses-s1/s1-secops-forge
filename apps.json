@@ -1,0 +1,143 @@
+{
+  "$schema": "./schema/app.schema.json",
+  "catalogue": {
+    "name": "S1 SecOps Forge",
+    "tagline": "Discover, deploy, and share community-built apps for SentinelOne",
+    "notes": "This file is the source of truth. Edit it to add or change apps. Volatile fields (stars, description, version, last updated, license, avatar) are pulled live from GitHub by the enrichment step and written into catalogue.json. Keep taglines short; the live GitHub description fills the card body."
+  },
+  "categories": [
+    "Deployers & Solutions",
+    "SOC & DFIR",
+    "Data & AI-SIEM",
+    "Integrations & Tooling"
+  ],
+  "types": [
+    "sdl-solution",
+    "deployer",
+    "mcp",
+    "skill",
+    "plugin",
+    "integration",
+    "tooling"
+  ],
+  "apps": [
+    {
+      "id": "ai-siem",
+      "name": "AI SIEM (OCSF Pipelines)",
+      "tagline": "OCSF pipelines and community transforms for SentinelOne AI SIEM",
+      "repo": "Sentinel-One/ai-siem",
+      "category": "Data & AI-SIEM",
+      "type": "integration",
+      "s1_products": ["AI SIEM", "Singularity Data Lake", "Data Pipelines"],
+      "author": "Sentinel-One",
+      "logo": "",
+      "docs_url": "",
+      "featured": true
+    },
+    {
+      "id": "s1-secops-skills",
+      "name": "S1 SecOps Skills",
+      "tagline": "SentinelOne SecOps skills plugin for Cowork and Claude Code",
+      "repo": "Sentinel-One/ai-siem",
+      "path": "plugins/s1-secops-skills",
+      "category": "Integrations & Tooling",
+      "type": "plugin",
+      "s1_products": ["Purple AI", "Singularity Data Lake", "Hyperautomation"],
+      "author": "Sentinel-One",
+      "logo": "",
+      "docs_url": "",
+      "featured": true
+    },
+    {
+      "id": "s1-soc-investigation",
+      "name": "S1 SOC Investigation",
+      "tagline": "Autonomous SOC and DFIR investigation workflow for SentinelOne",
+      "repo": "pmoses-s1/s1-soc-investigation",
+      "category": "SOC & DFIR",
+      "type": "skill",
+      "s1_products": ["Purple AI", "Singularity Data Lake", "Endpoint"],
+      "author": "pmoses-s1",
+      "logo": "",
+      "docs_url": "",
+      "featured": false
+    },
+    {
+      "id": "s1-ueba-deployer",
+      "name": "S1 UEBA Deployer",
+      "tagline": "One-shot UEBA anomaly detection deployment for Singularity Data Lake",
+      "repo": "pmoses-s1/s1-ueba-deployer",
+      "category": "Deployers & Solutions",
+      "type": "deployer",
+      "s1_products": ["Singularity Data Lake"],
+      "author": "pmoses-s1",
+      "logo": "",
+      "docs_url": "",
+      "featured": true
+    },
+    {
+      "id": "s1-ingest-health-deployer",
+      "name": "S1 Ingest Health Deployer",
+      "tagline": "Per-device ingest health monitoring deployment for SDL",
+      "repo": "pmoses-s1/s1-ingest-health-deployer",
+      "category": "Deployers & Solutions",
+      "type": "deployer",
+      "s1_products": ["Singularity Data Lake"],
+      "author": "pmoses-s1",
+      "logo": "",
+      "docs_url": "",
+      "featured": false
+    },
+    {
+      "id": "s1-detections-as-code",
+      "name": "S1 Detections as Code",
+      "tagline": "Manage SentinelOne custom detection rules as code",
+      "repo": "pmoses-s1/s1-detections-as-a-code",
+      "category": "SOC & DFIR",
+      "type": "sdl-solution",
+      "s1_products": ["Singularity Data Lake", "Custom Detections"],
+      "author": "pmoses-s1",
+      "logo": "",
+      "docs_url": "",
+      "featured": false
+    },
+    {
+      "id": "s1-aws-quick-skills",
+      "name": "S1 AWS Quick Skills",
+      "tagline": "Quick-start skills for AWS on SentinelOne",
+      "repo": "pmoses-s1/s1-aws-quick-skills",
+      "category": "Integrations & Tooling",
+      "type": "skill",
+      "s1_products": ["Singularity Data Lake", "Cloud Security"],
+      "author": "pmoses-s1",
+      "logo": "",
+      "docs_url": "",
+      "featured": false
+    },
+    {
+      "id": "apigenie",
+      "name": "apigenie",
+      "tagline": "",
+      "repo": "roarinpenguin/apigenie",
+      "category": "Integrations & Tooling",
+      "type": "tooling",
+      "s1_products": [],
+      "author": "roarinpenguin",
+      "logo": "",
+      "docs_url": "",
+      "featured": false
+    },
+    {
+      "id": "helios",
+      "name": "HELIOS",
+      "tagline": "HEC-enabled Event Log Inject & Orchestration System",
+      "repo": "natesmalley/jarvis_coding",
+      "category": "Integrations & Tooling",
+      "type": "tooling",
+      "s1_products": ["AI SIEM", "Singularity Data Lake"],
+      "author": "natesmalley",
+      "logo": "",
+      "docs_url": "",
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "S1Base app manifest entry",
+  "type": "object",
+  "required": ["id", "name", "repo", "category", "type"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$",
+      "description": "Stable unique slug, lowercase."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Display name shown on the card."
+    },
+    "tagline": {
+      "type": "string",
+      "maxLength": 120,
+      "description": "Optional short curated line. Leave empty to use the live GitHub description."
+    },
+    "repo": {
+      "type": "string",
+      "pattern": "^[^/\\s]+/[^/\\s]+$",
+      "description": "GitHub repo as owner/name. Drives all live enrichment."
+    },
+    "path": {
+      "type": "string",
+      "description": "Optional subdirectory within the repo for a monorepo app. Links and README point to this folder; stars and dates come from the parent repo."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Deployers & Solutions",
+        "SOC & DFIR",
+        "Data & AI-SIEM",
+        "Integrations & Tooling"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": ["sdl-solution", "deployer", "mcp", "skill", "plugin", "integration", "tooling"]
+    },
+    "s1_products": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "SentinelOne product areas this app touches."
+    },
+    "author": {
+      "type": "string",
+      "description": "Display author or org. Defaults to the repo owner if empty."
+    },
+    "logo": {
+      "type": "string",
+      "description": "Optional path to a logo image. Falls back to the owner avatar from GitHub."
+    },
+    "docs_url": {
+      "type": "string",
+      "description": "Optional external docs link."
+    },
+    "featured": {
+      "type": "boolean",
+      "description": "Pin to the featured row."
+    }
+  }
+}

@@ -1,0 +1,49 @@
+name: Validate manifest
+
+# Runs on every pull request that touches the manifest so a bad entry
+# cannot be merged. Confirms schema rules and that each listed repo exists
+# and is public.
+
+on:
+  pull_request:
+    paths:
+      - 'apps.json'
+      - 'scripts/validate.mjs'
+      - 'schema/**'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate schema
+        run: node scripts/validate.mjs
+
+      - name: Check listed repos exist and are public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          repos=$(node -e "const m=require('./apps.json');console.log(m.apps.map(a=>a.repo).join('\n'))")
+          fail=0
+          for r in $repos; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$r")
+            if [ "$code" != "200" ]; then
+              echo "::error::repo $r returned HTTP $code (missing or not public)"
+              fail=1
+            else
+              echo "ok: $r"
+            fi
+          done
+          exit $fail

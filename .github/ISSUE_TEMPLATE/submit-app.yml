@@ -1,0 +1,72 @@
+name: Submit an app
+description: Add a community app to the S1Base catalogue
+title: "[app] <owner>/<repo>"
+labels: ["app-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing. A maintainer will turn this into a pull request that adds your entry to `apps.json`.
+
+        By submitting you confirm this is a community tool. It is not an official SentinelOne product and will be listed as community-supported. Do not submit anything that ships secrets or requires credentials to be hard-coded.
+  - type: input
+    id: repo
+    attributes:
+      label: GitHub repo (owner/name)
+      placeholder: your-name/your-app
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Display name
+      placeholder: My S1 App
+    validations:
+      required: true
+  - type: input
+    id: tagline
+    attributes:
+      label: One-line tagline (optional)
+      description: Leave blank to use the repo description from GitHub.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Deployers & Solutions
+        - SOC & DFIR
+        - Data & AI-SIEM
+        - Integrations & Tooling
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - sdl-solution
+        - deployer
+        - mcp
+        - skill
+        - integration
+        - tooling
+    validations:
+      required: true
+  - type: input
+    id: products
+    attributes:
+      label: SentinelOne product areas (comma separated, optional)
+      placeholder: Singularity Data Lake, Purple AI
+  - type: input
+    id: docs
+    attributes:
+      label: Docs URL (optional)
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: This is a community tool, not an official SentinelOne product, and I understand it will be listed as community-supported.
+          required: true
+        - label: The repo is public and safe to run after review against a non-production tenant.
+          required: true

@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S1 SecOps Forge">
+  <title>S1 SecOps Forge</title>
+  <path d="M32 3 L57 12 V31 C57 47 45 57 32 61 C19 57 7 47 7 31 V12 Z" fill="#7c3aed"/>
+  <path d="M32 3 L57 12 V31 C57 47 45 57 32 61 C19 57 7 47 7 31 V12 Z" fill="none" stroke="#4c1d95" stroke-opacity="0.35" stroke-width="1.6"/>
+  <path d="M32 18 L35.2 28.8 L46 32 L35.2 35.2 L32 46 L28.8 35.2 L18 32 L28.8 28.8 Z" fill="#f5f3ff"/>
+  <circle cx="32" cy="32" r="2.5" fill="#6d28d9"/>
+</svg>
