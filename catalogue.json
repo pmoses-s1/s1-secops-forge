@@ -19,7 +19,7 @@
     "integration",
     "tooling"
   ],
-  "generated_at": "2026-07-22T14:28:46.062Z",
+  "generated_at": "2026-07-22T16:51:46.475Z",
   "count": 9,
   "apps": [
     {
@@ -38,7 +38,7 @@
       "logo": "",
       "docs_url": "",
       "featured": true,
-      "stars": 51,
+      "stars": 52,
       "forks": 30,
       "description": "A community‑driven, SentinelOne‑assisted library of parsers, dashboards, detections & response playbooks that supercharge the Singularity Platform.",
       "topics": [
@@ -47,7 +47,7 @@
         "sentinelone"
       ],
       "pushed_at": "2026-07-22T08:58:59Z",
-      "updated_at": "2026-07-22T08:59:37Z",
+      "updated_at": "2026-07-22T14:52:58Z",
       "open_issues": 2,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/8438799?v=4",
@@ -75,7 +75,7 @@
       "logo": "",
       "docs_url": "",
       "featured": true,
-      "stars": 51,
+      "stars": 52,
       "forks": 30,
       "description": "A community‑driven, SentinelOne‑assisted library of parsers, dashboards, detections & response playbooks that supercharge the Singularity Platform.",
       "topics": [
@@ -84,7 +84,7 @@
         "sentinelone"
       ],
       "pushed_at": "2026-07-22T08:58:59Z",
-      "updated_at": "2026-07-22T08:59:37Z",
+      "updated_at": "2026-07-22T14:52:58Z",
       "open_issues": 2,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/8438799?v=4",
