@@ -19,7 +19,7 @@
     "integration",
     "tooling"
   ],
-  "generated_at": "2026-07-23T03:50:42.093Z",
+  "generated_at": "2026-07-23T06:42:42.369Z",
   "count": 10,
   "apps": [
     {
@@ -38,7 +38,7 @@
       "logo": "",
       "docs_url": "",
       "featured": true,
-      "stars": 52,
+      "stars": 53,
       "forks": 30,
       "description": "A community‑driven, SentinelOne‑assisted library of parsers, dashboards, detections & response playbooks that supercharge the Singularity Platform.",
       "topics": [
@@ -47,7 +47,7 @@
         "sentinelone"
       ],
       "pushed_at": "2026-07-22T08:58:59Z",
-      "updated_at": "2026-07-22T14:52:58Z",
+      "updated_at": "2026-07-23T04:05:35Z",
       "open_issues": 2,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/8438799?v=4",
@@ -75,7 +75,7 @@
       "logo": "",
       "docs_url": "",
       "featured": true,
-      "stars": 52,
+      "stars": 53,
       "forks": 30,
       "description": "A community‑driven, SentinelOne‑assisted library of parsers, dashboards, detections & response playbooks that supercharge the Singularity Platform.",
       "topics": [
@@ -84,7 +84,7 @@
         "sentinelone"
       ],
       "pushed_at": "2026-07-22T08:58:59Z",
-      "updated_at": "2026-07-22T14:52:58Z",
+      "updated_at": "2026-07-23T04:05:35Z",
       "open_issues": 2,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/8438799?v=4",
@@ -142,8 +142,8 @@
       "forks": 1,
       "description": "One-click UEBA anomaly-detection deployer for SentinelOne SDL (interactive UI + GitHub Actions), with a simulated HEC test harness and a multi-tab review dashboard",
       "topics": [],
-      "pushed_at": "2026-07-23T02:23:54Z",
-      "updated_at": "2026-07-23T02:23:56Z",
+      "pushed_at": "2026-07-23T06:42:03Z",
+      "updated_at": "2026-07-23T06:29:20Z",
       "open_issues": 0,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/180599904?v=4",
@@ -169,8 +169,8 @@
       "forks": 0,
       "description": "One-click ingest-health monitoring for SentinelOne Singularity Data Lake (SILENT/DROP/SPIKE/NEW volume baselines). Sibling of s1-ueba-deployer.",
       "topics": [],
-      "pushed_at": "2026-07-18T16:31:57Z",
-      "updated_at": "2026-07-18T16:32:00Z",
+      "pushed_at": "2026-07-23T06:06:18Z",
+      "updated_at": "2026-07-23T06:06:33Z",
       "open_issues": 0,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/180599904?v=4",
