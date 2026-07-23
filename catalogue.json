@@ -19,7 +19,7 @@
     "integration",
     "tooling"
   ],
-  "generated_at": "2026-07-23T12:05:02.476Z",
+  "generated_at": "2026-07-23T14:36:55.393Z",
   "count": 10,
   "apps": [
     {
@@ -38,7 +38,7 @@
       "logo": "",
       "docs_url": "",
       "featured": true,
-      "stars": 53,
+      "stars": 54,
       "forks": 30,
       "description": "A community‑driven, SentinelOne‑assisted library of parsers, dashboards, detections & response playbooks that supercharge the Singularity Platform.",
       "topics": [
@@ -46,16 +46,16 @@
         "security",
         "sentinelone"
       ],
-      "pushed_at": "2026-07-22T08:58:59Z",
-      "updated_at": "2026-07-23T04:05:35Z",
+      "pushed_at": "2026-07-23T12:48:42Z",
+      "updated_at": "2026-07-23T13:16:42Z",
       "open_issues": 2,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/8438799?v=4",
       "html_url": "https://github.com/Sentinel-One/ai-siem",
       "default_branch": "main",
       "archived": false,
-      "version": "v_1_51_0",
-      "release_url": "https://github.com/Sentinel-One/ai-siem/releases/tag/v_1_51_0",
+      "version": "v_1_52_0",
+      "release_url": "https://github.com/Sentinel-One/ai-siem/releases/tag/v_1_52_0",
       "download_count": 0
     },
     {
@@ -75,7 +75,7 @@
       "logo": "",
       "docs_url": "",
       "featured": true,
-      "stars": 53,
+      "stars": 54,
       "forks": 30,
       "description": "A community‑driven, SentinelOne‑assisted library of parsers, dashboards, detections & response playbooks that supercharge the Singularity Platform.",
       "topics": [
@@ -83,16 +83,16 @@
         "security",
         "sentinelone"
       ],
-      "pushed_at": "2026-07-22T08:58:59Z",
-      "updated_at": "2026-07-23T04:05:35Z",
+      "pushed_at": "2026-07-23T12:48:42Z",
+      "updated_at": "2026-07-23T13:16:42Z",
       "open_issues": 2,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/8438799?v=4",
       "html_url": "https://github.com/Sentinel-One/ai-siem",
       "default_branch": "main",
       "archived": false,
-      "version": "v_1_51_0",
-      "release_url": "https://github.com/Sentinel-One/ai-siem/releases/tag/v_1_51_0",
+      "version": "v_1_52_0",
+      "release_url": "https://github.com/Sentinel-One/ai-siem/releases/tag/v_1_52_0",
       "download_count": 0
     },
     {
