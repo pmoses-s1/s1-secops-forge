@@ -19,7 +19,7 @@
     "integration",
     "tooling"
   ],
-  "generated_at": "2026-07-23T20:32:46.474Z",
+  "generated_at": "2026-07-23T22:17:58.337Z",
   "count": 10,
   "apps": [
     {
@@ -115,8 +115,8 @@
       "forks": 0,
       "description": "SentinelOne SOC investigation execution engine: sliced long-lookback SDL queries with resumable execution, content-addressed cache, verification, xlsx workbook, and a hardened Docker UI",
       "topics": [],
-      "pushed_at": "2026-07-21T22:52:08Z",
-      "updated_at": "2026-07-21T22:52:11Z",
+      "pushed_at": "2026-07-23T22:01:54Z",
+      "updated_at": "2026-07-23T22:02:02Z",
       "open_issues": 0,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/180599904?v=4",
@@ -142,8 +142,8 @@
       "forks": 1,
       "description": "One-click UEBA anomaly-detection deployer for SentinelOne SDL (interactive UI + GitHub Actions), with a simulated HEC test harness and a multi-tab review dashboard",
       "topics": [],
-      "pushed_at": "2026-07-23T07:54:54Z",
-      "updated_at": "2026-07-23T08:49:05Z",
+      "pushed_at": "2026-07-23T21:59:36Z",
+      "updated_at": "2026-07-23T21:59:45Z",
       "open_issues": 0,
       "license": "AGPL-3.0",
       "avatar_url": "https://avatars.githubusercontent.com/u/180599904?v=4",
