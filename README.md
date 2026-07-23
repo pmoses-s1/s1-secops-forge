@@ -1,5 +1,7 @@
 # S1 SecOps Forge
 
+### [Open the live catalogue »](https://pmoses-s1.github.io/s1-secops-forge/)
+
 **Discover, deploy, and share community-built apps for SentinelOne.**
 
 S1 SecOps Forge is a community app store for SentinelOne SecOps apps: deployers, SDL solutions, skills, MCP servers, and integrations. It is a static site backed by a curated manifest and enriched with live GitHub metadata (stars, description, latest release, last updated, license).
