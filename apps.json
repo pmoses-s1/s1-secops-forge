@@ -114,6 +114,19 @@
       "featured": false
     },
     {
+      "id": "spectra",
+      "name": "Spectra",
+      "tagline": "",
+      "repo": "roarinpenguin/spectra",
+      "category": "Integrations & Tooling",
+      "type": "tooling",
+      "s1_products": [],
+      "author": "roarinpenguin",
+      "logo": "",
+      "docs_url": "",
+      "featured": false
+    },
+    {
       "id": "apigenie",
       "name": "apigenie",
       "tagline": "",
