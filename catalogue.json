@@ -19,7 +19,7 @@
     "integration",
     "tooling"
   ],
-  "generated_at": "2026-07-24T06:42:09.453Z",
+  "generated_at": "2026-07-24T09:38:07.696Z",
   "count": 10,
   "apps": [
     {
@@ -194,7 +194,7 @@
       "docs_url": "",
       "featured": false,
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "description": "Detection as Code for SentinelOne: author detection rules as TOML, validate on PR, sync to the Custom Detection Rule API on merge (events, correlation, scheduled).",
       "topics": [],
       "pushed_at": "2026-07-07T05:30:13Z",
